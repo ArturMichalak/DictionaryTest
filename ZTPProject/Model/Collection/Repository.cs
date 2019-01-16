@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using ZTPBlok.ModelBL.Collection.Interfaces;
-using ZTPBlok.ModelBL.Collection.Iterator;
-using ZTPBlok.ModelBL.Collection.Iterator.Interface;
+using ZTPProject.Model.Collection.Interfaces;
+using ZTPProject.Model.Collection.Iterator;
+using ZTPProject.Model.Collection.Iterator.Interface;
 
-namespace ZTPBlok.ModelBL.Collection
+namespace ZTPProject.Model.Collection
 {
     public class Repository<T> : IRepository<T>
     {

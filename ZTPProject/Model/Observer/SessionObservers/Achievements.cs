@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
-using ZTPBlok.ModelBL.Collection;
-using ZTPBlok.ModelBL.Observer.Interfaces;
+using ZTPProject.Model.Collection;
+using ZTPProject.Model.Observer.Interfaces;
+using ZTPProject.View;
 
-namespace ZTPBlok.ModelBL.Observer.SessionObservers
+namespace ZTPProject.Model.Observer.SessionObservers
 {
     public class Achievements : IObserver
     {
@@ -73,6 +74,10 @@ namespace ZTPBlok.ModelBL.Observer.SessionObservers
                 default:
                     break;
             }
+
+            var x = GetNew();
+            if (x.Count > 0) 
+                BasicObjects.Dialog("Osiągnięcie nr " + x[0] + " zostało zdobyte", 3);
         }
         #endregion
     }

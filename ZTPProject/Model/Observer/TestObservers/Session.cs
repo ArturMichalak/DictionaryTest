@@ -1,10 +1,9 @@
-﻿using ZTPBlok.ModelBL.Observer.Interfaces;
-using ZTPBlok.ModelBL.Collection;
-using ZTPBlok.ModelBL.Collection.Iterator;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System;
+using ZTPProject.Model.Observer.Interfaces;
+using ZTPProject.Model.Collection;
 
-namespace ZTPBlok.ModelBL.Observer.TestObservers
+namespace ZTPProject.Model.Observer.TestObservers
 {
     public class Session : ISubject, IObserver
     {

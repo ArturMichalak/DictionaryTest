@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using ZTPBlok.ModelBL.Collection.Interfaces;
-using ZTPBlok.ModelBL.Collection.Iterator.Interface;
+using ZTPProject.Model.Collection.Interfaces;
+using ZTPProject.Model.Collection.Iterator.Interface;
 
-namespace ZTPBlok.ModelBL.Collection.Iterator
+namespace ZTPProject.Model.Collection.Iterator
 {
     public class Enumerable<T> : IIterator<T>
     {

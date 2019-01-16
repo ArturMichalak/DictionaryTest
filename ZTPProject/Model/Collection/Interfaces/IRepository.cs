@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ZTPBlok.ModelBL.Collection.Iterator.Interface;
+using ZTPProject.Model.Collection.Iterator.Interface;
 
-namespace ZTPBlok.ModelBL.Collection.Interfaces
+namespace ZTPProject.Model.Collection.Interfaces
 {
     public interface IRepository<T>
     {

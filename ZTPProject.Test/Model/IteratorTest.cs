@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using ZTPBlok.ModelBL.Collection;
-using ZTPBlok.ModelBL.Collection.Iterator;
-using ZTPBlok.ModelBL.Collection.Interfaces;
-using ZTPBlok.ModelBL.Collection.Iterator.Interface;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using ZTPProject.Model.Collection;
 
 namespace ZTPProject.Tests.ModelBL
 {

@@ -24,8 +24,8 @@ namespace ZTPProject.View
                 msg.Add(text, (Console.WindowWidth - text.Length - 2) / 2);
                 start += Console.WindowWidth - 6;
             }
-            Console.SetCursorPosition(0, Console.WindowHeight - height - 1);
-            Console.Write("+" + new String('-', Console.WindowWidth - 2) + "+");
+            //Console.SetCursorPosition(0, Console.WindowHeight - height - 1);
+            var textWindow = "+" + new String('-', Console.WindowWidth - 2) + "+";
             if (height < msg.Count) throw new ArgumentException();
             else if (height != msg.Count)
             {
@@ -33,17 +33,22 @@ namespace ZTPProject.View
                 top = top > 0 ? top-- : top;
                 for (int i = 0; i < top; i++)
                 {
-                    Console.Write("|" + new String(' ', Console.WindowWidth - 2) + "|");
+                    textWindow +="|" + new String(' ', Console.WindowWidth - 2) + "|";
                 }
             }
             foreach (var item in msg)
             {
-                Console.Write("|" + new String(' ', item.Value) + item.Key + new String(' ', Console.WindowWidth - item.Key.Length - item.Value - 2) + "|");
+                textWindow += "|" + new String(' ', item.Value) + item.Key + new String(' ', Console.WindowWidth - item.Key.Length - item.Value - 2) + "|";
             }
-            while (Console.CursorTop < Console.WindowHeight)
+            for (int i = 0; i < height-msg.Count-top; i++)
             {
-                Console.Write("|" + new String(' ', Console.WindowWidth - 2) + "|");
+                textWindow += "|" + new String(' ', Console.WindowWidth - 2) + "|";
             }
+            KeyValuePair<int, int> cursorPosition = new KeyValuePair<int, int>(Console.CursorTop, Console.CursorLeft);
+            Console.SetCursorPosition(0, Console.WindowHeight - height - 1);
+            Console.Write(textWindow);
+            Console.SetCursorPosition(cursorPosition.Value, cursorPosition.Key);
+
         }
     }
 }
