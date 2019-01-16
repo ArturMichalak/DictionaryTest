@@ -42,8 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Collection\Interfaces\IRepository.cs" />
+    <Compile Include="Model\Collection\Iterator\Enumerable.cs" />
+    <Compile Include="Model\Collection\Iterator\Interface\IIterator.cs" />
+    <Compile Include="Model\Collection\Repository.cs" />
+    <Compile Include="Model\Observer\Interfaces\IObserver.cs" />
+    <Compile Include="Model\Observer\Interfaces\ISubject.cs" />
+    <Compile Include="Model\Observer\SessionObservers\Achievements.cs" />
+    <Compile Include="Model\Observer\TestObservers\Session.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\BasicObjects.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
