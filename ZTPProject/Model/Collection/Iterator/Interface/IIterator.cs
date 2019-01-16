@@ -9,9 +9,9 @@ namespace ZTPProject.Model.Collection.Iterator.Interface
 {
     public interface IIterator<T>
     {
-        T First();
-        T Next();
-        T CurrentItem();
-        bool HasNext();
+        T First { get; }
+        T Next { get; }
+        T Item { get; }
+        bool HasNext { get; }
     }
 }

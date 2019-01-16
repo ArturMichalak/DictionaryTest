@@ -60,10 +60,10 @@ namespace ZTPProject.Model.Observer.TestObservers
         #region Subject Methods
         public void Notify(KeyValuePair<string, Object> results)
         {
-            var x = repository.CreateIterator();
-            while(x.HasNext())
+            var x = repository.CreateIterator;
+            while(x.HasNext)
             {
-                x.Next().DoOnAction(results);
+                x.Next.DoOnAction(results);
             }
         }
 

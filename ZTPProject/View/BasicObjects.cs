@@ -45,7 +45,7 @@ namespace ZTPProject.View
                 textWindow += "|" + new String(' ', Console.WindowWidth - 2) + "|";
             }
             KeyValuePair<int, int> cursorPosition = new KeyValuePair<int, int>(Console.CursorTop, Console.CursorLeft);
-            Console.SetCursorPosition(0, Console.WindowHeight - height - 1);
+            Console.SetCursorPosition(0, Console.WindowTop + Console.WindowHeight - height - 1);
             Console.Write(textWindow);
             Console.SetCursorPosition(cursorPosition.Value, cursorPosition.Key);
 

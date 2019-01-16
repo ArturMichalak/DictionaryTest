@@ -9,18 +9,23 @@ namespace ZTPProject.Model.Collection.Iterator
 {
     public class Enumerable<T> : IIterator<T>
     {
-        private readonly Repository<T> repository;
         private int index = -1;
-        public Enumerable(Repository<T> repository)
-        {
+        private readonly Repository<T> repository;
+        #region Iterator Operations
+        public Enumerable(Repository<T> repository) =>
             this.repository = repository;
-        }
-        public T First() => repository[0];
-        public T CurrentItem() => repository[index];
-        public bool HasNext() => index + 1 < repository.Count;
-        public T Next() => 
-            HasNext() ? 
-            repository[++index] : 
+        public bool HasNext =>
+            index + 1 < repository.Count;
+        public T First =>
+            repository[0];
+        public T Item =>
+            index < 0 ?
+            throw new InvalidOperationException() :
+            repository[index];
+        public T Next =>
+            HasNext ?
+            repository[++index] :
             throw new InvalidOperationException();
+        #endregion
     }
 }

@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Model\IteratorTest.cs" />
     <Compile Include="Model\SessionTest.cs" />
+    <Compile Include="Model\MainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\DialogTest.cs" />
   </ItemGroup>

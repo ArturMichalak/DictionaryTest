@@ -9,6 +9,6 @@ namespace ZTPProject.Model.Collection.Interfaces
 {
     public interface IRepository<T>
     {
-        IIterator<T> CreateIterator();
+        IIterator<T> CreateIterator { get; }
     }
 }

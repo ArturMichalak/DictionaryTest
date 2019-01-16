@@ -17,16 +17,18 @@ namespace ZTPProject.Tests.ModelBL
                 repository.Add(new KeyValuePair<char, int>((char)('a' + i), i));
             }
             repository.Remove(repository[3]);
-            var x = repository.CreateIterator();
-            while (x.HasNext())
+            repository[3] = new KeyValuePair<char, int>('c', 1);
+            var x = repository.CreateIterator;
+            Assert.ThrowsException<InvalidOperationException>(() => x.Item);
+            while (x.HasNext)
             {
-                if (x.Next().Value == 0)
-                    Assert.AreEqual('a', x.CurrentItem().Key);
+                if (x.Next.Value == 0)
+                    Assert.AreEqual('a', x.Item.Key);
                 else
-                    Assert.AreNotEqual('a', x.CurrentItem().Key);
+                    Assert.AreNotEqual('a', x.Item.Key);
             }
-            Assert.AreEqual('a', x.First().Key);
-            Assert.ThrowsException<InvalidOperationException>(action: () => x.Next());
+            Assert.AreEqual('a', x.First.Key);
+            Assert.ThrowsException<InvalidOperationException>(action: () => x.Next);
         }
     }
 }
